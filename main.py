@@ -19,7 +19,7 @@ def generate_image(prompt, negative_prompt, image_url, strength, num_inference_s
     )
     print(f"Request submitted. ID: {handler.request_id}")
 
-    # Iterate through events until the request is completed
+    # Iterate through events until the request is completed...
     for event in handler.iter_events(logs=False):
         if isinstance(event, fal.apps.InProgress):
             print('Request in progress')
