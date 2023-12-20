@@ -9,6 +9,7 @@ lib
 share
 test
 pyvenv.cfg
+.DS_Store
 # C extensions
 *.so
 
