@@ -51,4 +51,4 @@ iface = gr.Interface(
     live=False
 )
 
-iface.launch(share=True, show_api=True)
+iface.launch(server_name="0.0.0.0", show_api=True)
