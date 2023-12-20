@@ -2,7 +2,13 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+bin 
+flagged
+include
+lib
+share
+test
+pyvenv.cfg
 # C extensions
 *.so
 
