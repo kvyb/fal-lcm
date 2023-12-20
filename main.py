@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 port = int(os.environ.get('PORT', 7860))
-username = os.getenv("GRADIO_USERNAME", "default_username")
-password = os.getenv("GRADIO_PASSWORD", "default_password")
+username = os.getenv("GRADIO_USERNAME")
+password = os.getenv("GRADIO_PASSWORD")
 
 def generate_image(prompt, negative_prompt, image_url, strength, num_inference_steps):
     # Submit the request to the queue
