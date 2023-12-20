@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 port = int(os.environ.get('PORT', 7860))
+username = os.getenv("GRADIO_USERNAME", "default_username")
+password = os.getenv("GRADIO_PASSWORD", "default_password")
 
 def generate_image(prompt, negative_prompt, image_url, strength, num_inference_steps):
     # Submit the request to the queue
@@ -53,4 +55,4 @@ iface = gr.Interface(
     live=False
 )
 
-iface.launch(server_name="0.0.0.0", server_port=port, share=True, show_api=True)
+iface.launch(server_name="0.0.0.0", server_port=port, share=True, auth=[(username, password)], show_api=True)
