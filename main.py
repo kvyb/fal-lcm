@@ -19,6 +19,7 @@ def generate_image(prompt, negative_prompt, image_url, strength, num_inference_s
         'negative_prompt': negative_prompt,
         'strength': strength,
         'num_inference_steps': num_inference_steps,
+        'enable_safety_checks': False
     }
     
     if image_url:
