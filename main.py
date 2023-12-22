@@ -1,6 +1,7 @@
 import os
 import fal
 import gradio as gr
+from gradio import CSVLogger
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -61,7 +62,8 @@ iface = gr.Interface(
         gr.Slider(minimum=1, maximum=20, step=1, value=default_num_inference_steps, label="Number of Inference Steps")
     ],
     outputs="image",
-    live=False
+    live=False,
+    flagging_callback=CSVLogger()
 )
 
 iface.launch(server_name="0.0.0.0", server_port=port, share=True, auth=[(username1, password1), (username2, password2)], show_api=True)
